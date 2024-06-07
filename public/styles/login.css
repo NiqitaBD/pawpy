@@ -1,0 +1,69 @@
+.main {
+  width: 1200px; height: 100vh;
+}
+.main .content {
+  width: 600px;
+  display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 35px;
+  z-index: 999999999 !important;
+  background-color: var(--beige);
+}
+
+.content .header {
+  font-size: 36px; font-weight: 900; font-family: "Manchego"; color: var(--orange);
+}
+.content fieldset { border: 0; position: relative; }
+.content legend {
+  padding: 0 0 8px 18px;
+  font-size: 18px; font-weight: bold;
+}
+.content input {
+  width: 400px; height: 38px; border: 3px solid var(--orange); border-radius: 50px;
+  background-color: transparent;
+  box-sizing: border-box; padding: 0 18px;
+}
+
+.content #btn-confirm {
+  height: 38px; padding: 0 36px;
+  border-radius: 50px; background-color: var(--orange);
+  font-size: 16px; font-family: 400; color: var(--beige);
+}
+.content #btn-confirm:hover { background-color: var(--orange-hover); }
+
+.content .text {
+  font-size: 16px; font-weight: 400;
+}
+.content .text span { cursor: pointer; color: var(--orange); text-decoration: underline; }
+.wave {
+  height: 100vh;
+  z-index: 9999999999 !important;
+}
+
+.color {
+  position: absolute; top: 0; right: 0; height: 100vh;
+  width: 500px;
+  background-image: url("../assets/login.jpg");
+  background-size: cover;
+  background-position: center;
+  z-index: 2 !important;
+}
+
+.eye {
+  position: absolute; bottom: 23%; right: 4%;
+  font-size: 1.3rem; cursor: pointer;
+  color: var(--orange);
+}
+
+@media (max-width: 1200px) {
+  .main { width: 100%; }
+}
+
+@media (max-width: 720px) {
+  .wave { display: none; }
+  .color { display: none; }
+  .content { width: 100% !important; }
+}
+
+@media (max-width: 450px) {
+  .content input { width: 90vw; }
+  .content .text { text-align: center; }
+}

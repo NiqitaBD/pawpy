@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles/main.css">
+  <link rel="stylesheet" href="styles/dogs.css">
+  <title>Pawpy</title>
+  <link rel="icon" type="image/x-icon" href="/assets/favicon.png">
+  <script type="module" src="./scripts/header.js"></script>
+  <script type="module" src="./scripts/connectivity.js"></script>
+  <script type="module" src="./scripts/dogs.js"></script>
+  <script type="module" src="./scripts/main.js"></script>
+  <script type="module" src="./scripts/scroller.js"></script>
+  <script type="module" src="./scripts/socket.js"></script>
+</head>
+
+<body>
+  <div class="paperContinuous"></div>
+  <div id="imageCover"></div>
+  <section class="land">
+    <header></header>
+    <div class="container">
+      <span class="primary">Deschideți ușa către o </span>
+      <span class="primary">nouă casă pentru </span>
+      <span class="primary">cățeluși cu Pawpy</span>
+      <a href="#scrollTo"><button class="header-button-dogs" style="font-size: 16px;">Cățeluși</button></a>
+      <!-- <div class="text">Porniți într-o aventură printre cățeii noștri fermecători și alege-ți prietenul blănos perfect pentru adopție!</div> -->
+    </div>
+  </section>
+  <div class="wrapper" for="section.wrap" extended="120"></div>
+  <section class="wrap">
+    <div class="text">
+      <span>Fiecare cățel merită o casă iubitoare</span>
+      Ajută-ne să le oferim acest lucru completând formularul
+    </div>
+    <a href="adddog.html"><button>Completează</button></a>
+  </section>
+  <div class="back" id="scrollTo">
+    <div class="header">Descoperă viitorul membru al familiei tale</div>
+    <div id="filters">
+      <img src="assets/objects/settings.svg" alt="Settings icon" class="settings">
+      <div class="display">
+        <div class="button orange">Filtre</div>
+      </div>
+      <div class="menu">
+        <div class="side first">
+        </div>
+        <div class="breedSelector breedDisplayFor2 relativeCenter">
+          <div class="content">
+          </div>
+        </div>
+        <div class="side">
+          <button class="button apply">Aplică</button>
+        </div>
+      </div>
+
+    </div>
+    <div id="dogs"></div>
+    <div class="pagination"> </div>
+  </div>
+  <div id="overlayLoader">
+    <div class="loader"></div>
+    <span>Loading...</span>
+  </div>
+  <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+</body>
+
+</html>

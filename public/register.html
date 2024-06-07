@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pawpy</title>
+  <link rel="icon" type="image/x-icon" href="/assets/favicon.png">
+  <link rel="stylesheet" href="styles/main.css">
+  <link rel="stylesheet" href="styles/register.css">
+  <script type="module" src="./scripts/register.js"></script>
+  <script type="module" src="./scripts/scroller.js"></script>
+  <script type="module" src="./scripts/socket.js"></script>
+</head>
+
+<body>
+  <section class="flex">
+    <div id="frame">
+      <div class="header">Înscrieți-vă</div>
+      <form id="form">
+        <div class="flex userdata">
+          <fieldset>
+            <legend>Nume:</legend>
+            <input type="text" id="firstname" placeholder="Nume" maxlength="30" required>
+          </fieldset>
+          <fieldset class="float-right">
+            <legend>Prenume:</legend>
+            <input type="text" id="lastname" placeholder="Prenume" maxlength="30" class="float-right" required>
+          </fieldset>
+        </div>
+        <fieldset>
+          <legend>Email:</legend>
+          <input type="email" id="email" placeholder="support@pawpy.website" maxlength="30" required>
+        </fieldset>
+        <fieldset>
+          <legend>Parola:</legend>
+          <input type="password" id="password" placeholder="Parola" maxlength="30" required>
+          <iconify-icon icon="iconamoon:eye" class="eye"></iconify-icon>
+        </fieldset>
+      </form>
+      <button id="register" type="submit" form="form">Înscrieți-vă</button>
+      <span>Bun venit în lumea pufoasă Pawpy!</span>
+    </div>
+  </section>
+  <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+</body>
+
+</html>

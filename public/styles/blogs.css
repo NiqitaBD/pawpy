@@ -1,0 +1,193 @@
+header .connectivity * { color: var(--dark-blue); }
+header .connectivity .borderer { border-color: var(--dark-blue); }
+.hallowButton {
+  color: var(--dark-blue) !important;
+  border-color: var(--dark-blue) !important;
+}
+.questionPaw { height: 30px; }
+.btn-more { 
+  height: 38px; position: relative;
+  padding: 0 36px;
+  background-color: var(--orange); 
+  border-radius: 100px; 
+  color: var(--beige); font-size: 16px;
+}
+.btn-more:hover { background-color: var(--orange-hover); }
+.paddingDiv { display: flex; justify-content: center; }
+.warp {
+  width: 1160px; height: 180px; position: relative;
+  background-color: var(--orange);
+  border-radius: 50px;
+  margin-top: 50px;
+  display: flex; flex-direction: column; align-items: center; justify-content: center;  
+}
+
+.warp .header { font-family: Manchego; font-size: 36px; font-weight: 900; }
+.warp .subHeader { color: var(--beige); font-size: 18px; font-weight: 400; max-height: 105px; }
+
+.warp .inputArea {
+  position: absolute; bottom: 0; 
+  transform: translate(0, 50%); 
+  width: 540px; height: 38px;
+  background-color: var(--beige);
+  border-radius: 100px;
+  display: flex; align-items: center; 
+  box-sizing: border-box; padding: 0 10px; gap: 10px; 
+}
+.warp .inputArea iconify-icon { font-size: 22px; }
+.warp .inputArea input { 
+  background-color: transparent; font-size: 16px; 
+  padding: 5px 10px;
+  width: 100%;
+}
+.warp .inputArea:focus-within { border: 3px solid var(--orange); box-sizing: border-box; }
+.manager { 
+  margin: 79px 60px 60px 60px; display: flex; justify-content: center; gap: 80px; 
+  flex-wrap: wrap;
+  user-select: none;
+}
+.manager .option { 
+  padding: 0 36px; border-radius: 200px;
+  height: 38px; display: flex; align-items: center;
+  font-size: 18px; font-weight: 700; 
+  cursor: pointer;
+  transition: .3s ease;
+}
+.manager .selected { 
+  background-color: var(--orange); color: var(--beige); 
+}
+.lead { 
+  width: 1160px; height: 620px; 
+  border-radius: 50px; border: 3px solid var(--orange);
+  display: flex; align-items: center; gap: 60px;
+  box-sizing: border-box; padding: 50px;
+}
+.lead img { width: 50%; aspect-ratio: 1/1; width: 550px; border-radius: 40px; }
+.lead .content {
+  width: 100%; height: 100%;
+  display: flex; flex-direction: column;
+  justify-content: center; gap: 10px; align-items: flex-start;
+}
+.content .orange { color: var(--orange); font-size: 22px; text-transform: capitalize; }
+.content .header { 
+  font-family: Manchego; font-size: 32px; font-weight: 900; 
+  line-height: 1;
+  display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+.content .message { 
+  font-size: 18px; line-height: 26px; 
+  max-height: 285px !important; overflow: hidden; 
+}
+
+#cards { 
+  margin-top: 40px;
+  width: 100%;
+  display: flex; gap: 30px; justify-content: center;
+  flex-wrap: wrap;
+}
+#cards .card {
+  width: 340px; height: 400px; position: relative;
+  border: 3px solid var(--orange);
+  border-radius: 40px;
+  box-sizing: border-box; padding: 20px 22px;
+}
+#cards .card:hover { background-color: rgb(237, 92, 1, .1); }
+#cards .card img { width: 100%; height: 210px; border-radius: 27px; }
+#cards .card .header { 
+  font-size: 18px; font-weight: 900;
+  margin-top: 15px; overflow: hidden; 
+  display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical;
+}
+#cards .card .subHeader { max-height: 105px; overflow: hidden; font-size: 15px; font-weight: 500; line-height: 26px; margin-top: 10px; }
+#cards .card .btn-more { position: absolute; bottom: 20px; left: 50%; transform: translate(-50%, 0);}
+.pagination { 
+  display: flex; justify-content: center; align-items: center; gap: 25px;
+  margin-top: 80px; 
+  font-size: 18px;
+}
+.pagination .selected { color: var(--orange); font-size: 22px; } 
+.pagination .number { cursor: pointer; }
+#questions { width: 100%; display: flex; flex-direction: column; align-items: center; gap: 15px; }
+#questions .flex { display: flex; align-items: center; gap: 20px; }
+#questions .question { 
+  width: 1160px; height: 55px; overflow: hidden;
+  display: flex; align-items: center;
+  cursor: pointer !important;
+  border-radius: 40px; border: 3px solid var(--orange);
+  padding: 0 0 0 30px; box-sizing: border-box;
+  font-size: 18px; font-weight: 700;
+  transition: all 1s ease;
+}
+#questions .question .content { 
+  display: none;
+  font-size: 18px; text-align: center;
+  margin-top: 43px;
+}
+#questions .question.opened { 
+  display: block;
+  height: auto;
+  max-height: 500px;
+  padding: 15px 60px 15px 60px; box-sizing: border-box;
+  background-color: rgb(237, 92, 1, .15);
+}
+#questions .question.opened .content { display: block; }
+.paw { position: absolute; width: 160px; }
+.paw:nth-of-type(1) { bottom: -6px; left: -6px; }
+.paw:nth-of-type(2) { top: -6px; right: -6px; transform: rotate(180deg); }
+
+footer { margin-top: 230px; }
+
+@media (max-width: 1439px) {
+  .content .message {
+    display: inline-block !important;
+    max-height: 210px; 
+    overflow: hidden;
+  }
+  .lead img {
+    width: 480px;
+  }
+  .paw { aspect-ratio: 1/1; width: 140px; }
+}
+
+@media (max-width: 1160px) {
+  .lead, #questions .question { width: 90vw; }
+  #questions .question { min-height: 55px; height: auto; }
+}
+
+@media (max-width: 800px) {
+  .manager { gap: 15px; }
+  .lead { height: 350px; }
+  .lead img { width: 50%; }
+  .content .message {
+    max-height: 80px !important; overflow: hidden; 
+  }
+}
+
+@media (max-width: 800px) {
+  .paddingDiv { box-sizing: border-box; padding: 0 20px; }
+  .lead { 
+    flex-direction: column; 
+    height: auto; 
+    padding: 30px;
+    gap: 0;
+  }
+  .paw { aspect-ratio: 1/1; width: 70px; }
+  .lead img { width: 100%; }
+  .warp .subHeader { font-size: 16px; text-align: center; max-width: 90%; }
+  .warp .inputArea { gap: 5px; }
+  .warp .inputArea {
+    width: 260px;
+  }
+  .lead .btn-more { position: relative; left: 50%; transform: translateX(-50%); }
+  #questions .question { padding: 15px 20px 15px 60px; max-height: unset; }
+  .warp { margin-top: 25px; }
+}
+
+@media (max-width: 550px) {
+  section { width: auto !important; }
+  #cards { justify-content: center; }
+  .paw:nth-of-type(1) { bottom: 0; left: 0; }
+  .paw:nth-of-type(2) { top: 0; right: 0; transform: rotate(180deg); }
+  .manager { margin: 56px 50px 37px 50px; }
+}

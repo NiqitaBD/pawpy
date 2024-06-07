@@ -1,0 +1,47 @@
+body { 
+  background-image: url("../assets/dogInLeaves.png"); 
+  background-size: cover;
+}
+section { margin: 0; align-items: center; min-height: 100vh; }
+#frame {
+  width: 540px; min-height: 640px;
+  background-color: var(--beige); border-radius: 50px;  
+  display: flex; flex-direction: column; justify-content: center; gap: 40px; align-items: center;
+  box-sizing: border-box; padding: 0 72px;
+}
+.float-right { float: right; }
+.header {
+  font-size: 36px; font-weight: 900; color: var(--orange); font-family: "Manchego";
+}
+.userdata input { width: 95%;  }
+input {
+  height: 48px; width: 100%;
+  border-radius: 50px; border: 3px solid var(--orange);
+  box-sizing: border-box; padding: 0 10px;
+  background-color: transparent;
+}
+fieldset, form { width: 100%; }
+fieldset { border: none; position: relative; }
+legend { margin-bottom: 8px; padding: 0 10px; font-size: 18px; font-weight: bold; }
+form { display: flex; flex-direction: column; gap: 25px; }
+button {
+  padding: 0 36px; height: 38px; background-color: var(--orange);
+  color: var(--beige); border-radius: 50px;
+  font-weight: 400;
+}
+button:hover { background-color: var(--orange-hover); }
+span { font-size: 16px; font-weight: 400; text-align: center; }
+
+.eye {
+  position: absolute; bottom: 27%; right: 4%;
+  font-size: 1.3rem; cursor: pointer;
+  color: var(--orange);
+}
+
+@media (max-width: 540px) {
+  #frame { width: 90vw; padding: 0 30px; position: relative; left: 50%; transform: translateX(-50%); }
+  .userdata { flex-direction: column; gap: 25px; }
+  .userdata input { width: 100%; }
+  .float-right { float: none; }
+  body { background-position: center; }
+}

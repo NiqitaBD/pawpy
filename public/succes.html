@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pawpy</title>
+  <link rel="icon" type="image/x-icon" href="/assets/favicon.png">
+  <link rel="stylesheet" href="styles/main.css">
+  <link rel="stylesheet" href="styles/succes.css">
+  <script type="module" src="scripts/header.js"></script>
+  <script type="module" src="scripts/connectivity.js"></script>
+  <script type="module" src="scripts/succes.js"></script>
+  <script type="module" src="./scripts/socket.js"></script>
+  <style>
+    header .connectivity { color: var(--dark-blue) !important; }
+    footer { display: none; } 
+  </style>
+</head>
+
+<body>
+  <section class="headerSection">
+    <header></header>
+  </section>
+  <div id="overlay">
+    <iconify-icon icon="lets-icons:happy"></iconify-icon>
+    <span>Succes!</span>
+    Acțiunea a fost cu succes!
+  </div>
+  <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+</body>
+
+</html>

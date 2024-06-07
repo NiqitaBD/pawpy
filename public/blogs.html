@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pawpy</title>
+  <link rel="icon" type="image/x-icon" href="/assets/favicon.png">
+  <link rel="stylesheet" href="styles/main.css">
+  <link rel="stylesheet" href="styles/blogs.css">
+  <script type="module" src="./scripts/blogs.js"></script>
+  <script type="module" src="./scripts/header.js"></script>
+  <script type="module" src="./scripts/connectivity.js"></script>
+  <script type="module" src="./scripts/scroller.js"></script>
+  <script type="module" src="./scripts/socket.js"></script>
+</head>
+
+<body>
+  <section class="headerSection">
+    <header></header>
+  </section>
+  <section>
+    <div class="paddingDiv">
+      <div class="warp">
+        <img src="assets/objects/paw.svg" alt="Paw Outline" class="paw">
+        <img src="assets/objects/paw.svg" alt="Paw Outline" class="paw">
+        <div class="header">Blog</div>
+        <div class="subHeader">Exploră ultimele noutăți</div>
+        <div class="inputArea shadow-hard">
+          <iconify-icon icon="ph:magnifying-glass-bold"></iconify-icon>
+          <input type="text" id="inp-search" placeholder="Adopția câinelui..."> 
+        </div>
+      </div>
+    </div>
+    <div class="manager">
+      <div class="option">Toate</div>
+      <div class="option">Adopție</div>
+      <div class="option">Noutăți</div>
+      <div class="option">Întrebări</div>
+    </div>
+  </section>
+  <section>
+    <div class="lead relative-to-center">
+      <img src="./assets/payment.png" alt="Image">
+      <div class="content">
+        <span class="orange">Noutăți</span><br>
+        <span class="header">Lorem ipsum dolor sit amet consectetur</span><br>
+        <span class="message">Lorem ipsum dolor sit amet consectetur. Curabitur id rutrum 
+          sollicitudin eleifend. Proin arcu velit auctor adipiscing mauris rhoncus aliquet 
+          rhoncus sit. Nunc id lorem tincidunt neque neque. Hac varius velit tortor cursus 
+          et massa pellentesque. Nunc id lorem tincidunt neque neque. Hac varius velit tortor 
+          cursus et massa pellentesque. Nunc id lorem tincidunt neque neque..</span> <br>
+          <button class="btn-more" id="1">Mai multe</button>
+      </div>
+    </div>
+    <div id="cards">
+    </div>
+    <div id="questions">
+    </div>
+    <div class="pagination">
+    </div>
+  </section>
+  <div id="overlayLoader">
+    <div class="loader"></div>
+    <span>Loading...</span>
+  </div>
+  <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+</body>
+
+</html>

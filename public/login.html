@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pawpy</title>
+  <link rel="icon" type="image/x-icon" href="/assets/favicon.png">
+  <link rel="stylesheet" href="styles/main.css">
+  <link rel="stylesheet" href="styles/login.css">
+  <script type="module" src="./scripts/login.js"></script>
+  <script type="module" src="./scripts/scroller.js"></script>
+  <script type="module" src="./scripts/socket.js"></script>
+</head>
+
+<body>
+  <div class="color"></div>
+  <div class="main flex relative-to-center">
+    <form class="content">
+      <div class="header">Bine ați venit!</div>
+      <fieldset>
+        <legend>Email:</legend>
+        <input type="email" placeholder="email@exemple.com" required>
+      </fieldset>
+      <fieldset>
+        <legend>Parola:</legend>
+        <input type="password" placeholder="Parola" id="password" required>
+        <iconify-icon icon="iconamoon:eye" class="eye"></iconify-icon>
+        <!-- <iconify-icon icon="iconamoon:eye-off-bold"></iconify-icon> -->
+      </fieldset>
+      <button id="btn-confirm">Conectare</button>
+      <div class="text">Încă nu aveți cont? <a href="register.html"><span>Înscrieți-vă acum</span></a></div>
+      <div class="text">Ai uitat parola? <span class="forgot-password">Resetează-o aici</span></div>
+    </form>
+    <img src="assets/wave_bei.png" alt="" class="wave">
+  </div>
+  <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pawpy</title>
+  <link rel="icon" type="image/x-icon" href="/assets/favicon.png">
+  <link rel="stylesheet" href="styles/main.css">
+  <link rel="stylesheet" href="styles/landing.css">
+  <!-- <link rel="stylesheet" href="styles/responsive.css"> -->
+  <script type="module" src="./scripts/header.js"></script>
+  <script type="module" src="./scripts/connectivity.js"></script>
+  <script type="module" src="./scripts/scroller.js"></script>
+  <script type="module" src="./scripts/landing.js"></script>
+  <script type="module" src="./scripts/socket.js"></script>
+</head>
+
+<body>
+  <!-- <div id="overlayProst"></div> -->
+  <div id="paperContinue"></div>
+  <section class="landing">
+    <div class="wave-side-r"></div>
+    <header></header>
+    <div class="flex data">
+      <div class="side content">
+        <div class="header">
+          <div class="absoluter flex">
+            <img src="assets/objects/arrow.svg" alt="">
+            <span class="orange">Am găsit soluția potrivită</span>
+          </div>
+          <span class="primary">În căutarea</span> 
+          <span class="orange primary">unui prieten</span> 
+          <span class="primary">de nădejde?</span>
+        </div>
+        <div class="text">
+          La Pawpy, fiecare câine are o poveste specială și așteaptă să își găsească un cămin plin de iubire. Oferim
+          câini potriviți pentru orice familie și primim cu drag câini fără adăpost, oferindu-le îngrijire și o nouă
+          șansă la o viață fericită.
+        </div>
+      </div>
+      <div class="side image">
+        <img src="assets/retreiver.png" alt="">
+      </div>
+    </div>
+  </section>
+  <div class="wrapper" for="section.content">
+    <img src="assets/paw.svg" alt="Paw SVG" class="paw">
+    <img src="assets/paw.svg" alt="Paw SVG" class="paw">
+  </div>
+  <section class="content">
+    <div class="wrap flex">
+      <div class="item hidden">
+        <div class="circle"><img src="./assets/heartpaw.png" alt="Ceva"></div>
+        Grijă
+      </div>
+      <div class="item hidden">
+        <div class="circle"><img src="./assets/housedog.png" alt="Ceva"></div>
+        Siguranță
+      </div>
+      <div class="item hidden">
+        <div class="circle"><img src="./assets/handmade.png" alt="Ceva"></div>
+        Iubire
+      </div>
+      <div class="item hidden">
+        <div class="circle"><img src="./assets/bowldog.png" alt="Ceva"></div>
+        Reabilitare
+      </div>
+    </div>
+  </section>
+  <div class="wrapper" for=".about-section"></div>
+  <section class="about-section">
+    <div class="about flex">
+      <div class="side image"><img src="assets/mission.png" alt=""></div>
+      <div class="side content">
+        <div class="header">Misiunea noastră</div>
+        <div class="text">
+          Scopul nostru este de a <span>salva, reabilita și educa</span> câinii până când fiecare dintre ei găsește un
+          cămin sigur și
+          iubitor. Ne dorim să punem capăt abuzurilor și situațiilor de abandon, deoarece fiecare viață este importantă.
+          <br> <br>
+          Ne dedicăm îmbunătățirii vieții câinilor fără stăpân și sprijinirii celor care îi iubesc, prin salvare,
+          reabilitare și găsirea unui cămin responsabil pentru ei. La <span>adăpostul Pawpy</span>, ne asigurăm că
+          fiecare câine
+          primește îngrijirea necesară, hrană de calitate, cele mai bune servicii veterinare și programe de
+          desensibilizare pentru recuperarea emoțională a câinilor abuzați.
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="stats flex">
+    <div class="stat" id="dp-saved">
+      <span>0</span>
+      de câini salvați
+    </div>
+    <img src="assets/wave_ver_orange.png" alt="">
+    <div class="stat" id="dp-possession">
+      <span>0</span>
+      de câini în adăpost
+    </div>
+    <img src="assets/wave_ver_orange.png" alt="">
+    <div class="stat" id="dp-adopted">
+      <span>0</span>
+      de câini adoptați
+    </div>
+    <img src="assets/wave_ver_orange.png" alt="">
+    <div class="stat" id="dp-seats">
+      <span>0</span>
+      de padocuri
+    </div>
+  </section>
+  <div class="carousel-section">
+    <div class="carousel no-scrollbar-visibility">
+      <div class="image"></div>
+      <div class="image"></div>
+      <div class="image"></div>
+      <div class="image"></div>
+      <div class="image"></div>
+      <div class="image"></div>
+      <div class="image"></div>
+      <div class="image"></div>
+    </div>
+    <a href="photos.html">Vizualizați galeria Pawpy</a>
+  </div>
+  <section class="dogs-section">
+    <div class="header">Căței în așteptarea unei case</div>
+    <div id="dogs"></div>
+    <div class="header no-after"><button class="more-dogs"><a href="dogs.html?scroll=true">Vezi toți cățeii</a></button></div>
+  </section>
+  <section class="donation-section">
+    <div class="donations wrapperAfter">
+      <div>
+        <span class="blue">Contribuie financiar</span>
+        <span class="beige">Donați Alăturați-vă misiunii noastre! Fii Speranța!<br>
+          Orice contribuție, oricât de mică, contează enorm pentru noi.</span>
+      </div>
+      <div class="flex fields">
+        <fieldset>
+          <legend>Nume, Prenume</legend>
+          <input type="text" id="inp-donate-name">
+        </fieldset>
+        <fieldset>
+          <legend>Suma</legend>
+          <input type="number" id="inp-donate-value">
+        </fieldset>
+        <button id="btn-donate">Donează</button>
+      </div>
+    </div>
+  </section>
+  <div id="feedbacks" class="no-scrollbar-visibility">
+    <div class="header">Recenzii</div>
+    <div class="cards no-scrollbar-visibility">
+    </div>
+    <div class="buttons flex">
+      <button class="fbutton" direction="left"> <iconify-icon icon="eva:arrow-up-fill"></iconify-icon> </button>
+      <button class="fbutton" direction="right"> <iconify-icon icon="eva:arrow-up-fill"></iconify-icon> </button>
+    </div>
+  </div>
+  <div id="overlay" style="display: none;">
+    <div class="prompt">
+      <iconify-icon icon="fontisto:close" class="close"></iconify-icon>
+      <div class="header">Lăsați o recenzie</div>
+      <div class="stars padder">
+        <img src="assets/starh.svg" alt="" count="1" class="star">
+        <img src="assets/starh.svg" alt="" count="2" class="star">
+        <img src="assets/starh.svg" alt="" count="3" class="star">
+        <img src="assets/starh.svg" alt="" count="4" class="star">
+        <img src="assets/starh.svg" alt="" count="5" class="star">
+      </div>
+      <textarea name="" id="content" maxlength="160"></textarea>
+      <span class="padder"></span>
+      <button class="post">Postează</button>
+    </div>
+  </div>
+  <div id="overlayLoader">
+    <div class="loader"></div>
+    <span>Loading...</span>
+  </div>
+  <div class="disclaimer">Acest website a fost realizat în cadrul
+    competiției ”Tekwill Junior Ambassadors” organizată de proiectul ”Tekwill în Fiecare
+    Școală” și nu reflectă neapărat opinia proiectului.</div>
+  <script src="https://code.iconify.design/iconify-icon/1.0.8/iconify-icon.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+</body>
+
+</html>

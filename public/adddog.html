@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pawpy</title>
+  <link rel="icon" type="image/x-icon" href="/assets/favicon.png">
+  <link rel="stylesheet" href="styles/main.css">
+  <link rel="stylesheet" href="styles/adddog.css">
+  <script type="module" src="./scripts/main.js"></script>
+  <script type="module" src="./scripts/connectivity.js"></script>
+  <script type="module" src="./scripts/header.js"></script>
+  <script type="module" src="./scripts/scroller.js"></script>
+  <script type="module" src="./scripts/adddog.js"></script>
+  <script type="module" src="./scripts/socket.js"></script>
+</head>
+
+<body>
+  <div class="wave"></div>
+  <section class="page">
+    <header></header>
+    <div class="landing flex">
+      <img src="assets/dog_care.png" alt="Dog hugging owner" class="dog-care">
+      <div>
+        <span>Dorești să înscrii un câine în adăpost?</span>
+        Te vom ajuta să iei decizia potrivită pentru el.
+        <br> <br>
+        Predarea unui câine nouă este o decizie dificilă, dar uneori este una care este dincolo de controlul tău.
+        Există multe motive pentru care ai putea simți că trebuie să renunți la câinele tău, și suntem aici să te
+        ajutăm. Nu te vom judeca dacă decizi că este mai bine să îi găsești o nouă casă.
+      </div>
+    </div>
+    <div class="header">Pașii pentru înregistrare</div>
+    <div class="steps">
+      <div class="step flex hide">
+        <div class="circle">1</div>
+        <div class="content">
+          <span>Completați formularul de înregistrare online</span>
+          <div class="text">Acest prim pas implică accesarea site-ului nostru dedicat adopțiilor și completarea
+            formularului de înregistrare online. Formularul solicită informații detaliate despre dvs., precum numele,
+            adresa, informații de contact și detalii despre experiența dvs. anterioară cu animalele de companie. În
+            plus, veți fi întrebat despre mediul în care cățelușul va trăi, inclusiv dacă aveți spațiu în aer liber,
+            dacă aveți alte animale de companie și altele. Aceste informații sunt esențiale pentru a ne asigura că găsim
+            un cățel care se potrivește perfect nevoilor și stilului dvs. de viață.</div>
+          <div class="details"> Mai multe detalii <iconify-icon icon="raphael:arrowdown"></iconify-icon></div>
+        </div>
+      </div>
+
+      <div class="step flex hide">
+        <div class="circle">2</div>
+        <div class="content">
+          <span>Programați o vizită la adăpost</span>
+          <div class="text">După ce formularul de înregistrare este trimis, un membru al echipei noastre vă va contacta
+            pentru a stabili o vizită la adăpost. Vizita va oferi oportunitatea de a interacționa direct cu cățelușii
+            disponibili pentru adopție și de a evalua compatibilitatea cu un potențial companion. Veți avea timp să
+            petreceți cu diferiți cățeluși, să-i observați comportamentul și să discutați cu personalul nostru despre
+            nevoile și preferințele dvs.</div>
+          <div class="details"> Mai multe detalii <iconify-icon icon="raphael:arrowdown"></iconify-icon></div>
+        </div>
+      </div>
+
+      <div class="step flex hide">
+        <div class="circle">3</div>
+        <div class="content">
+          <span>Interviu și evaluare a adopției</span>
+          <div class="text">În timpul vizitei la adăpost, veți fi invitat să participați la un interviu și o evaluare a
+            adopției. Această etapă implică o discuție detaliată despre motivele dvs. pentru adopție, experiența dvs.
+            anterioară cu animalele de companie și capacitatea dvs. de a vă îngriji de un cățel. Vom discuta despre
+            programul zilnic, rutina de îngrijire, necesitățile de exercițiu și alte aspecte importante pentru a ne
+            asigura că găsim un cățel care se potrivește perfect în viața dvs.</div>
+          <div class="details"> Mai multe detalii <iconify-icon icon="raphael:arrowdown"></iconify-icon></div>
+        </div>
+      </div>
+
+      <div class="step flex hide">
+        <div class="circle">4</div>
+        <div class="content">
+          <span>Verificarea și aprobarea anchetei de către administrator</span>
+          <div class="text">După finalizarea interviului și evaluării, ancheta dvs. va fi trimisă administratorului
+            site-ului nostru pentru verificare și aprobare. Aceasta implică o examinare atentă a informațiilor furnizate
+            în formularul de înregistrare și discuțiile din timpul interviului. Este posibil să contactăm referințe sau
+            să solicităm informații suplimentare, dacă este necesar. Odată ce ancheta este aprobată, veți fi notificat
+            și veți putea să continuați procesul de adopție. Echipa noastră este disponibilă pentru a răspunde la
+            întrebările dvs. și pentru a vă oferi sprijin în fiecare pas al acestui proces important.</div>
+          <div class="details"> Mai multe detalii <iconify-icon icon="raphael:arrowdown"></iconify-icon></div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+  <div class="wrapper" for=".wrap"></div>
+  <section class="page">
+    <div class="wrap flex">
+      <div class="data">
+        <span class="beige">Vorbiți cu echipa noastră pentru sfaturi</span>
+        <span>
+          Dacă întâmpinați dificultăți și trebuie să vă despărțiți
+          de câinele dumneavoastră, sau dacă doriți să discutați cu cineva pentru sfaturi, suntem la doar un apel
+          telefonic distanță.
+        </span>
+      </div>
+      <a href="tel:+37368600600"><button>068 600 600</button></a>
+    </div>
+    <div class="header header-form" style="text-align: center;">Completează formularul</div>
+    <div id="form" class="flex">
+      <div class="display">
+        <div class="preview">
+          <iconify-icon icon="icon-park-solid:upload" class="preview-icon"></iconify-icon>
+          <input type="file" name="image" id="imageSelector" accept="image/*">
+        </div>
+        <div class="spoiler">
+          Asigurați-vă că poza câinelui este clară și recentă, reprezentându-l într-o poziție naturală, pentru a
+          facilita evaluarea compatibilității cu potențialii adoptatori.
+        </div>
+      </div>
+      <div class="data">
+
+        <div class="flex">
+          <fieldset>
+            <legend>Nume:</legend>
+            <input type="text" id="nameSelector" placeholder="Introdu numele câinelui...">
+          </fieldset>
+          <fieldset class="flex-align-end sex">
+            <legend>Gen:</legend>
+            <input type="text" placeholder="Masculin/Feminin...">
+          </fieldset>
+        </div>
+
+        <div class="flex">
+          <fieldset class="age">
+            <legend>Vârsta:</legend>
+            <input type="text" placeholder="Introdu vârsta câinelui...">
+          </fieldset>
+
+          <fieldset class="flex-align-end">
+            <legend>Rasa:</legend>
+            <input type="text" class="breedSelectorInput" breed-selector-id="1" id="breedSelector"
+              placeholder="Introdu rasa câinelui...">
+            <div class="breedSelector breedDisplayFor1">
+              <div class="content"></div>
+            </div>
+          </fieldset>
+
+        </div>
+
+        <fieldset class="full">
+          <legend>Motivul înscrierii:</legend>
+          <input type="text" class="full" id="reasonSelector" placeholder="De ce îl dai în adopție?...">
+        </fieldset>
+
+        <fieldset class="full description">
+          <legend>Descrierea câinelui:</legend>
+          <textarea name="" id="descriptionSelector" placeholder="Descrieți câinelui în câteva cuvinte..."
+            maxlength="300"></textarea>
+          <span style="text-align: right;"></span>
+        </fieldset>
+        <button type="submit" id="btn-confirm" class="relative-to-center">Postează</button>
+      </div>
+
+    </div>
+  </section>
+  <div style="background-color: var(--dark-blue);">
+    <section class="page">
+      <div id="faq">
+        <div class="flex">
+          <div class="header">Întrebări frecvente</div>
+        </div>
+      </div>
+    </section>
+  </div>
+  <div id="overlayLoader">
+    <div class="loader"></div>
+    Loading...
+  </div>
+  <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+</body>
+
+</html>

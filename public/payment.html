@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pawpy</title>
+  <link rel="icon" type="image/x-icon" href="/assets/favicon.png" />
+  <link rel="stylesheet" href="styles/main.css" />
+  <link rel="stylesheet" href="styles/payment.css" />
+  <script type="module" src="./scripts/header.js"></script>
+  <script type="module" src="./scripts/connectivity.js"></script>
+  <script type="module" src="./scripts/main.js"></script>
+  <script type="module" src="./scripts/payment.js"></script>
+  <script type="module" src="./scripts/scroller.js"></script>
+  <script type="module" src="./scripts/socket.js"></script>
+</head>
+
+<body>
+  <section>
+    <header></header>
+    <div id="frame">
+      <div class="header">Donația ta</div>
+      <div class="flex buttons">
+        <button class="orange paymentdur" type="once">O dată</button>
+        <button class="orange paymentdur" type="monthly">Lunar</button>
+      </div>
+      <span>Fiecare donație este importantă</span>
+      <div class="grid">
+      </div>
+      <div id="input-zone">
+        <input type="number" placeholder="0" id="value">
+        <select name="" id="">
+          <option value="">RON</option>
+          <option value=""></option>
+          <option value=""></option>
+        </select>
+      </div>
+      <button class="blue" id="btn-donate">Donează acum</button>
+    </div>
+  </section>
+
+  <div id="overlayLoader">
+    <div class="loader"></div>
+    Loading...
+  </div>
+  <div id="overview">
+    <div class="flex">
+      <div class="info">
+        <img src="assets/payment_image.png" alt="">
+        <div class="text">
+          <span class="header">Dăruiește speranță celor peste 200 de câini!</span>
+          Peste 200 de suflete canine au fost salvate și sunt acum găzduite și îngrijite la Adăpostul Pawpy. Acestea au
+          nevoie de adăpost, hrană, îngrijire medicală și, cel mai important, de o șansă pentru un viitor mai bun. Fă o
+          donație acum către Adăpostul Pawpy și ajută-ne să continuăm misiunea de a salva și îngriji câinii fără stăpân!
+          <span class="orange" style="font-size: 16px;">În numele tuturor micilor patrupezi de la Adăpostul Pawpy,
+            mulțumim din inimă pentru orice contribuție!</span>
+        </div>
+      </div>
+      <div class="data">
+        <div class="display">
+          <iconify-icon icon="fontisto:close" class="close"></iconify-icon>
+          <div class="header">Donația ta</div>
+          <div class="value">85 MDL</div>
+          <img src="assets/objects/wiggle_line.png" alt="">
+          <div class="flex">
+            <input type="checkbox" name="taxes" id="taxes">
+            <label for="taxes">Doresc să plătesc taxele</label>
+          </div>
+        </div>
+        <div class="buttons">
+          <button class="orange paymentmethod" type="Card">Card bancar</button>
+          <button class="blue paymentmethod" type="PayPal">PayPal</button>
+        </div>
+      </div>
+      <div id="card">
+        <div>
+          <iconify-icon icon="ic:round-arrow-back-ios" class="back"></iconify-icon>
+          <iconify-icon icon="fontisto:close" class="close"></iconify-icon>
+          <div class="header">Card bancar</div>
+          Vă rugăm să furnizați detaliile cardului pentru a continua cu donația. Acest card va fi debitat.
+          <div class="inputzone">
+            <input type="text" id="cardnumber" placeholder="Număr de card" style="border-top: 0;">
+            <input type="text" id="cardname" placeholder="Nume">
+            <div class="flex">
+              <input type="text" id="cardexpiration" placeholder="Data expirării">
+              <input type="text" id="cardcvv" placeholder="CVV">
+            </div>
+          </div>
+        </div>
+        <button class="blue finish-card">Continuă</button>
+      </div>
+      <div id="questions" class="flex">
+        <div class="header">
+          Donația mea este sigură?
+          <div class="text">
+            Utilizăm tehnologia SSL pentru a proteja informațiile dvs. și colaborăm cu Stripe, un procesator de plăți
+            securizat. Datele financiare sunt gestionate direct de serverele Stripe, în conformitate cu standardele PCI.
+          </div>
+        </div>
+        <div class="header">
+          Cum pot fi sigur că donația mea ajunge la adăpost?
+          <div class="text">
+            Toate donațiile sunt direcționate direct către adăpostul nostru de câini. Folosim fondurile pentru
+            îngrijirea, hrana și tratamentele necesare câinilor. Puteți avea încredere că fiecare donație contribuie
+            direct la bunăstarea animalelor noastre.
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+</body>
+
+</html>

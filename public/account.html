@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pawpy</title>
+  <link rel="icon" type="image/x-icon" href="/assets/favicon.png">
+  <link rel="stylesheet" href="styles/main.css">
+  <link rel="stylesheet" href="styles/account.css">
+  <script type="module" src="./scripts/main.js"></script>
+  <script type="module" src="./scripts/connectivity.js"></script>
+  <script type="module" src="./scripts/header.js"></script>
+  <script type="module" src="./scripts/scroller.js"></script>
+  <script type="module" src="./scripts/account.js"></script>
+  <script type="module" src="./scripts/socket.js"></script>
+</head>
+
+<body>
+  <div class="color"></div>
+  <section class="page">
+    <div class="wave"></div>
+    <header></header>
+    <div class="flex">
+      <div class="union">
+        <div class="paper"></div>
+        <div class="content">
+          <div class="name">Hello, Niqita!</div>
+          <div class="userImage">
+            <div class="iconsOpener" scope="icons"><iconify-icon scope="icons" icon="mage:image"></iconify-icon>
+            </div>
+            <div class="icons opened" scope="icons">
+              <div class="iconCopy">
+                <iconify-icon icon="material-symbols:upload" class="inputIcon"></iconify-icon>
+                <form action="/setUserCustomImage" method="POST" enctype="multipart/form-data" id="imageForm">
+                  <input type="file" name="image" id="inp-image" accept="image/*" required>
+                </form>
+              </div>
+            </div>
+          </div>
+          <div class="logOut"><iconify-icon icon="ci:exit"></iconify-icon>Log Out</div>
+          <div class="slideSelector" slide="Setari"><span>Setări</span></div>
+          <div class="slideSelector" slide="Anchete"><span>Anchete</span></div>
+          <div class="slideSelector" slide="Donatii"><span>Donații</span></div>
+          <div class="slideSelector" slide="Favourites"><span>Câini favoriți</span></div>
+        </div>
+      </div>
+      <div class="slide" id="anchete">
+
+      </div>
+      <div class="slide" id="donatii">
+          <span style="width: 100%; text-align: center; font-size: 18px;">Se pare că nu ai nimic aici!</span>
+      </div>
+
+      <div class="slide" id="users">
+        <div class="flex">
+          <input type="text" placeholder="ID / Nume / Prenume" class="inputSearch">
+          <button class="search">Caută</button>
+        </div>
+
+      </div>
+
+      <div class="slide" id="dogs">
+        
+      </div>
+
+      <div class="slide" id="setari">
+        <div class="flex">
+          <fieldset>
+            <legend>Nume:</legend>
+            <input type="text" placeholder="Nume">
+          </fieldset>
+          <fieldset class="flex-align-end">
+            <legend>Prenume:</legend>
+            <input type="text" placeholder="Prenume"> 
+          </fieldset>
+        </div>
+        <fieldset>
+          <legend>Email:</legend>
+          <input type="text" placeholder="Email">
+        </fieldset>
+        <fieldset>
+          <legend>Parola:</legend>
+          <input type="text" placeholder="Parola">
+        </fieldset>
+        <button class="orange save">Salvează</button>
+        <button class="blue delete-account">Șterge contul</button>
+      </div>
+
+      <div class="slide" id="favourites"></div>
+      <div class="slide" id="logs">
+        <span style="text-align: center;">Apasă butonul de mai jos pentru a primi logurile dorite.</span>
+        <div class="buttons">
+          <button class="orange logselector" log="admin">Admin</button>
+          <button class="orange logselector" log="verify">Verificări Anchete</button>
+        </div>
+      </div>
+      <div class="slide" id="faq">
+        <button class="add-faq">Adaugă</button>
+      </div>
+      <div class="slide" id="blogs">
+        <button class="add-blog">Adaugă</button>
+      </div>
+    </div>
+  </section>
+
+  <div id="overlayLoader">
+    <div class="loader"></div>
+    <span>Loading...</span>
+  </div>
+  <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+</body>
+
+</html>

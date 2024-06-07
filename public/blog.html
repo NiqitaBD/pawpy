@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pawpy</title>
+  <link rel="icon" type="image/x-icon" href="/assets/favicon.png">
+  <link rel="stylesheet" href="styles/main.css">
+  <link rel="stylesheet" href="styles/blog.css">
+  <script type="module" src="./scripts/connectivity.js"></script>
+  <script type="module" src="./scripts/header.js"></script>
+  <script type="module" src="./scripts/scroller.js"></script>
+  <script type="module" src="./scripts/blog.js"></script>
+  <script type="module" src="./scripts/socket.js"></script>
+</head>
+
+<body>
+  <section class="header-section">
+    <header></header>
+  </section>
+  <div class="wave"></div>
+  <section class="data flex">
+    <div class="side content">
+      <span class="type"></span>
+      <div class="header"></div>
+      <div class="image shadow"></div>
+      <span class="info"></span>
+      <div class="message-content"></div>
+    </div>
+    <div class="side suggestions">
+      <div class="header">Recomandăm</div>
+      <div class="data"></div>
+    </div>
+  </section>
+  <div id="overlayLoader">
+    <div class="loader"></div>
+    <span>Loading...</span>
+  </div>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+</body>
+
+</html>

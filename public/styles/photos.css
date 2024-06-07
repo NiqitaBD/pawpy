@@ -1,0 +1,69 @@
+footer { margin-top: 140px; }
+.footerDogs { left: 50% !important; transform: translate(-50%, -66%) !important;  }
+header .connectivity * { color: var(--dark-blue); }
+header .connectivity .borderer { border-color: var(--dark-blue); transition: .3s ease; }
+header .connectivity .borderer:hover { border-color: var(--orange); }
+.gallery {
+  display: flex; justify-content: space-evenly; gap: 30px;
+}
+
+.column {
+  display: flex; flex-direction: column; gap: 30px;
+  height: auto;
+  align-items: center; justify-content: flex-start;
+}
+.column:nth-child(1) {
+  width: 40%;
+}
+.column:nth-child(2), .column:nth-child(3) {
+  width: 30%;
+}
+.column div { width: 100%; overflow: hidden; transition: .3s ease; height: 330px; cursor: pointer;}
+.column img {
+  width: 100%; height: 100%;
+  border-radius: 40px; object-fit: cover;
+}
+.column div:hover { transform: scale(1.05); }
+.fimage:hover { transform: unset !important; }
+.fimage {
+  width: 100%;
+}
+.fimage { font-size: 18px; font-weight: 400; }
+.fimage span {
+  display: block;
+  font-family: "Manchego"; font-size: 50px; font-weight: 900;
+  color: var(--orange);
+  margin-bottom: 15px;
+}
+
+.column-0-image-0 { height: 400px !important; }
+.column-0-image-1 { height: 300px !important; }
+.column-0-image-2 { height: 270px !important; }
+
+.column-1-image-0 { height: 400px !important; }
+.column-1-image-1 { height: 270px !important; }
+.column-1-image-2 { height: 250px !important; }
+.column-1-image-17 { height: 600px !important; }
+
+.column-2-image-0 { height: 270px !important; }
+.column-2-image-1 { height: 540px !important; }
+.column-2-image-2 { height: 270px !important; }
+.column-2-image-8 { height: 700px !important; }
+.column-2-image-11 { height: 600px !important; }
+span.orange {
+  display: block; margin-top: 30px;
+  color: var(--orange); font-size: 18px; text-align: center;
+  box-sizing: border-box; padding: 0 20px;
+}
+@media (max-width: 800px) {
+  .gallery { flex-direction: column; }
+  .column { width: 100% !important; }
+  .column div { display: flex; justify-content: center; }
+  .fimage { display: block !important; }
+  .column img { width: 90%; }
+}
+
+@media (max-width: 600px) {
+  .fimage { height: auto !important; box-sizing: border-box; padding: 0 20px; }
+  .header-section { margin-top: 0; }
+}

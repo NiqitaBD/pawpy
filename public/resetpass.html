@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pawpy</title>
+  <link rel="icon" type="image/x-icon" href="/assets/favicon.png">
+  <link rel="stylesheet" href="styles/main.css">
+  <script type="module" src="./scripts/connectivity.js"></script>
+  <script type="module" src="./scripts/scroller.js"></script>
+  <script type="module" src="./scripts/socket.js"></script>
+  <style>
+    header .connectivity { color: var(--dark-blue) !important; }
+    body {
+      min-height: 100vh;
+      display: flex; align-items: center; justify-content: center;
+    }
+    .container {
+      width: 300px; min-height: 200px;
+      border: 3px solid #062D3E; border-radius: 30px;
+      display: flex; flex-direction: column; justify-content: center; align-items: center;
+      gap: 15px;
+    }
+    span { font-size: 26px; font-weight: 900; }
+    input { 
+      width: 80%; height: 30px; 
+      background-color: transparent; 
+      border: 3px solid var(--orange); border-radius: 50px;
+      box-sizing: border-box; padding: 0 30px;
+    }
+
+
+    button { 
+      width: 200px; height: 38px; 
+      background-color: transparent; 
+      border: 3px solid var(--orange); border-radius: 50px; 
+      transition: .5s ease;
+    }
+    button:hover { background-color: var(--orange-hover); }
+
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <span>Resetează parola</span>
+    <input type="text" placeholder="Parola">
+    <button class="confirm" type="submit">Confirmă</button>
+  </div>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+  <script>
+    const pageParams = new URLSearchParams(window.location.search);
+    const vid = pageParams.get("verifyid")
+    if (vid == null) window.location.href = "/"
+    $(".confirm").on("click", function() {
+      const pageParams = new URLSearchParams(window.location.search);
+      const val = $("input").val()
+      if (val.length < 5) return 
+      if (val.length > 20) return 
+      $.ajax({
+        url: "/confirmResetPass",
+        type: "post",
+        data: JSON.stringify({ vid: vid, pass: val }),
+        contentType: 'application/json',
+        success: function (res) {
+          window.location.href = "succes.html"
+        },
+        error: function (res) {
+          setTimeout(() => {
+            window.location.href = "error.html"
+          }, 500);
+        },
+        timeout: 3000,
+      })  
+    })
+    </script>
+</body>
+
+</html>

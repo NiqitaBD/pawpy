@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pawpy</title>
+  <link rel="icon" type="image/x-icon" href="/assets/favicon.png">
+  <link rel="stylesheet" href="styles/main.css">
+  <link rel="stylesheet" href="styles/dog.css">
+  <script type="module" src="./scripts/main.js"></script>
+  <script type="module" src="./scripts/header.js"></script>
+  <script type="module" src="./scripts/connectivity.js"></script>
+  <script type="module" src="./scripts/dog.js"></script>
+  <script type="module" src="./scripts/scroller.js"></script>
+  <script type="module" src="./scripts/socket.js"></script>
+</head>
+
+<body>
+  <section class="headerSection"><header></header></section>
+  <section class="data-section">
+    <div class="image">
+      <div class="subImage"><iconify-icon icon="tabler:edit"></iconify-icon> Apasă pe imagine pentru a o schimba!</div>
+      <img src="assets/objects/pawFill.svg" alt="Paw Outline" class="paw">
+      <img src="assets/objects/pawFill.svg" alt="Paw Outline" class="paw">
+    </div>
+    <div class="data">
+      <div class="name">Pupsik</div>
+      <div class="detail"><span>Rasă: </span>Golden Retriever</div>
+      <div class="detail"><span>Rasă: </span>Golden Retriever</div>
+      <div class="detail"><span>Rasă: </span>Golden Retriever</div>
+      <div class="detail"><span>Rasă: </span>Lorem ipsum dolor sit amet consectetur. Sed sed nunc nisi adipiscing cursus donec. Amet dapibus pellentesque eu dictumst turpis senectus. Mauris egestas sollicitudin amet morbi eu. Est aliquam semper tellus orci nibh euismod turpis.</div>
+      <div class="blueButton">Contactați-ne</div>
+    </div>
+  </section>
+  <div id="overlay">
+    <div class="prompt">
+    </div>
+  </div>
+  <div id="overlayLoader">
+    <div class="loader"></div>
+    <span>Loading...</span>
+  </div>
+  <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+</body>
+
+</html>
